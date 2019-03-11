@@ -1,2 +1,2 @@
-console.log(navigator.userAgent);
-document.cookie = `browser = ${navigator.userAgent}`
+document.cookie = `browser = ${encodeURIComponent(navigator.userAgent)}`
+console.log(decodeURIComponent(document.cookie));
