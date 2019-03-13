@@ -152,3 +152,146 @@ document.addEventListener("contextmenu", e => {
 //  .block{ border:1px solid black; position: absolute; display: block;}
 
 //  21.)
+window.location = "http://www.google.com"
+
+//  22.)
+var timDiv0 = null
+var timDiv1 = null
+var div = document.getElementsByTagName("div")
+div[0].addEventListener("mouseover", e => {
+    e.stopPropagation()
+    clearTimeout(timDiv0)
+    clearTimeout(timDiv1)
+    timDiv0 = setTimeout(() => {
+        div[0].style.backgroundColor = "red"
+    }, 1000)
+    timDiv1 = setTimeout(() => {
+        div[1].style.backgroundColor = "blue"
+    }, 2000)
+})
+div[0].addEventListener("mouseout", e => {
+    e.stopPropagation()
+    clearTimeout(timDiv0)
+    clearTimeout(timDiv1)
+    div[0].style.backgroundColor = "white"
+    div[1].style.backgroundColor = "white"
+})
+//dla div[1] identycznie tylko na odwrót setTimeout'y
+
+//  23.)
+var buttons = document.getElementsByTagName("button")
+for (let i in buttons) {
+    buttons[i].innerText = (parseInt(i) + 1)
+}
+
+//  24.)
+var z = parseInt(window.prompt("ile elementów utworzyć?"))
+for (let i = 0; i < z; i++) {
+    let x = document.createElement("div")
+    x.classList.add("klasa")
+    document.body.appendChild(x)
+}
+
+//  25.)
+document.getElementById("area").style.border = "5px dotted black"
+document.getElementById("area").addEventListener("keydown", function (event) {
+    console.log(event.code);
+    if (this.style.border == "5px dashed black") {
+        this.style.border = "5px dotted black"
+    }
+    else {
+        this.style.border = "5px dashed black"
+    }
+})
+
+//  26.)
+document.addEventListener("keydown", function (event) {
+    console.log(event.key);
+    if (!event.key[1]) document.body.innerHTML = `Wciśnięto: ${event.key}` // krótszy niż 2 znaki
+    //document.body.innerHTML = 'wciśnięto: ' + String.fromCharCode(e.which)
+})
+
+//  27.)
+function generuj(x) {
+    document.body.innerHTML = "" //reset strony
+    console.log(x);
+
+    var tab = new Array(x)  // "utwórz tablicę o rozmiarze N"
+    console.log(tab);
+
+    for (let i = 0; i < tab.length; i++) {  //  "wypełnij ją losowymi liczbami całkowitymi z zakresu <1;N>"
+        while (true) {      // "wypełniając zapewnij by nie było w tablicy duplikatów" - losuje tak długo aż nie będzie duplikatu
+            var los = Math.floor(Math.random() * x) + 1
+            if (!tab.includes(los)) {
+                tab[i] = los
+                break
+            }
+        }
+    }
+    console.log(tab);
+
+    tab.sort((a, b) => b - a) //    "posortuj tablicę malejąco"
+    console.log(tab);
+
+    //  "wypisz na stronie wszystkie liczby łamiąc wiersze co 10 (zachowaj wygląd jak na filmie)"
+    var table = document.createElement("table")
+    table.style.borderSpacing = "25px 0"
+    document.body.appendChild(table)
+    var tr
+    for (let i in tab) {
+        if (i % 10 == 0) {
+            tr = document.createElement("tr")
+            table.appendChild(tr)
+        }
+        let z = document.createElement("td")
+        z.innerText = tab[i]
+        tr.appendChild(z)
+    }
+}
+
+//  28.)
+window.scrollTo(0, document.body.scrollHeight);
+// document.scrollingElement.scrollTop = document.scrollingElement.scrollHeight;
+
+//  29.)
+class Koło {
+    constructor(speed) {
+        this.speed = speed
+        this.DOM = null
+        this.wstaw()
+        this.obracaj()
+    }
+    wstaw() {
+        this.DOM = new Image()
+        this.DOM.src = "./round.png"
+        this.DOM.style.position = "fixed"
+        var x = Math.floor(Math.random() * (window.innerWidth - 50)) // - szer obrazka - żeby nie wychodziło
+        var y = Math.floor(Math.random() * (window.innerHeight - 50))
+        this.DOM.style.left = x + "px"
+        this.DOM.style.top = y + "px"
+        document.body.append(this.DOM)
+    }
+    obracaj() {
+        this.DOM.classList.add("rotating")
+        this.DOM.style.animationDuration = this.speed + "s"
+    }
+}
+
+window.addEventListener("load", () => {
+    setInterval(() => {
+        let speed = Math.random() * 5
+        new Koło(speed)
+    }, 2000)
+})
+
+//  30.)
+document.getElementById("formularz").onsubmit = function (e) {
+    e.preventDefault()
+    if (document.getElementById("formularz").children[0].value && document.getElementById("formularz").children[2].value) {
+        this.submit()
+    }
+    else {
+        window.alert("wypełnij formularz")
+    }
+}
+//ewnetulanie button.type = 'button' i normalnie onclick na buttonie
