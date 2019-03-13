@@ -52,6 +52,7 @@ Math.floor(Math.random() * 11)  // <0,10>
 //     ~~x === parseInt(x) - jedyna różnica to że przy ~~: NaN => 0
 
 //  7.)
+document.getElementById('formularz').children[1].type = 'button' // - zeby nie wysyłać formularza - zmiana typu buttona
 window.location = "http://" + link
 window.open('http://' + link)
 
@@ -90,3 +91,64 @@ addEventListener('mouseenter')
 // function pogrub(event) {
 //     event.target.style.fontWeight = "bold"
 // }
+
+//  11.)
+this.style.height.slice(0, -2) // - odciąć pixele
+this.style.height = hi + "px" // - dopisać pixele
+//converting obj to array:
+//  Object.values(object).forEach(el=>{}}) || Array.from(object)
+
+//  12.)
+e => {
+    var mouseX = e.pageX - div.offsetLeft;
+    var width = window.getComputedStyle(this).width.slice(0, -2)
+    //var width = window.getComputedStyle(this).getPropertyValue("width").slice(0, -2)
+}
+
+//  13.)
+document.getElementsByTagName("img")[0].addEventListener("click", function () { window.alert(this.src) }) //całe zadanie
+
+//  14.)
+document.getElementsByTagName("input")[1].onfocus = function () { this.style.background = "#888888" }
+document.getElementsByTagName("input")[1].onblur = function () { this.style.background = "white" }
+
+//  15.)
+var img = new Image()
+img.src = "http://www.tl.krakow.pl/semantic.cms/templates/aqua_black/graphics/bg_header.png"
+document.body.append(img)
+
+//  16.)
+e.stopPropagation()
+// najlepiej zapisać dane w zmiennych zamiast wyciągać z innertexta
+
+//  17.)
+var los = Math.floor(Math.random() * 26) + 65 //    Math.floor(Math.random() * (x + 1 [-y]) ) [+y] - liczba całkowita z zakresu <y, x>
+String.fromCharCode(los)
+
+//  18.)
+let width = window.getComputedStyle(div).width      //  var w = window.getComputedStyle(that).getPropertyValue("width")
+let height = window.getComputedStyle(div).height    //  var h = window.getComputedStyle(that).getPropertyValue("height")
+
+//  19.)
+document.cookie = `browser = ${encodeURIComponent(navigator.userAgent)}`
+console.log(decodeURIComponent(document.cookie));
+
+//  20.)
+document.addEventListener("contextmenu", e => {
+    e.preventDefault()
+    let x = e.clientX
+    let y = e.clientY
+    let block = document.createElement("div")
+    block.classList.add("block")
+    block.style.left = x + "px"
+    block.style.top = y + "px"
+    block.innerText = "Nie skopiujesz!"
+    document.body.appendChild(block)
+    setTimeout(() => {
+        block.remove()
+    }, 5000)
+})
+
+//  .block{ border:1px solid black; position: absolute; display: block;}
+
+//  21.)
