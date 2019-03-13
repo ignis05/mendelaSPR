@@ -4,5 +4,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function btClick() {
     var link = document.getElementById("formularz").childNodes[0].value
-    window.location.href = "http://" + link
+    window.location = "http://" + link
 }
