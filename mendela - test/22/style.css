@@ -1,0 +1,10 @@
+div{
+	border:solid 1px;
+	width:200px;
+	height:200px;
+	background-color:white;
+}
+div>div{
+	width:100px;
+	height:100px;
+}
