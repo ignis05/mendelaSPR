@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+window.onload = () => {
     setInterval(() => {
         var imgs = document.getElementsByTagName("img")
         var tab = []
@@ -10,4 +10,4 @@ document.addEventListener("DOMContentLoaded", () => {
             img.src = tab.shift()
         });
     }, 1000)
-})
+}

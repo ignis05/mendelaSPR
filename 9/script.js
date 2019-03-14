@@ -1,5 +1,5 @@
 // wersja upośledzona z wykorzystaniem closures (tak jak wymaga mendela)
-document.addEventListener("DOMContentLoaded", () => {
+window.onload = () => {
     function closure(i) {
         return function () {
             window.alert(i)
@@ -12,4 +12,4 @@ document.addEventListener("DOMContentLoaded", () => {
         button.onclick = closure(i)
         document.body.appendChild(button)
     }
-})
+}

@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+window.onload = () => {
     document.getElementById("area").style.border = "5px dotted black"
     document.getElementById("area").addEventListener("keydown", function (event) {
         console.log(event.code);
@@ -9,4 +9,4 @@ document.addEventListener("DOMContentLoaded", () => {
             this.style.border = "5px dashed black"
         }
     })
-})
+}

@@ -30,6 +30,6 @@ function generuj(x) {
     }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+window.onload = () => {
     generuj(20)
-})
+}

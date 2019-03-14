@@ -1,4 +1,4 @@
-window.addEventListener("load", () => {
+window.onload = () => {
     var timDiv0 = null
     var timDiv1 = null
     var div = document.getElementsByTagName("div")
@@ -38,4 +38,4 @@ window.addEventListener("load", () => {
         div[0].style.backgroundColor = "white"
         div[1].style.backgroundColor = "white"
     })
-})
+}

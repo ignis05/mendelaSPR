@@ -21,9 +21,9 @@ class Koło {
     }
 }
 
-window.addEventListener("load", () => {
+window.onload = () => {
     setInterval(()=>{
         let speed = Math.random() * 5
         new Koło(speed)
     },2000)
-})
+}

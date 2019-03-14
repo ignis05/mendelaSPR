@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+window.onload = () => {
     document.addEventListener("keydown", e => {
         if (e.code == "Enter") {
             var inp = document.getElementsByTagName("input")[0]
@@ -19,4 +19,4 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
     })
-})
+}

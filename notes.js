@@ -1,5 +1,5 @@
 //  1.)
-document.addEventListener("DOMContentLoaded", () => { }); window.addEventListener("load", () => { }); window.onload = () => { };
+window.onload = () => { };
 document.write(""); document.body.innerHTML = ""
 
 //  2.)
@@ -49,7 +49,7 @@ setInterval(() => {
 
 //  6.)
 ~~(Math.random() * 11)  // <0,10>
-//     ~~x === parseInt(x) === Math.floor(x) - jedyna różnica to że przy ~~: NaN => 0
+//     ~~x działa jak: parseInt(x) lub Math.floor(x) 
 
 //  7.)
 document.getElementById('formularz').children[1].type = 'button' // - zeby nie wysyłać formularza - zmiana typu buttona
@@ -96,7 +96,7 @@ addEventListener('mouseenter')
 this.style.height.slice(0, -2) // - odciąć pixele
 this.style.height = hi + "px" // - dopisać pixele
 //converting obj to array:
-//  Object.values(object).forEach(el=>{}}) || Array.from(object)
+//  Object.values(object)|| Array.from(object)
 
 //  12.)
 e => {
@@ -276,12 +276,12 @@ class Koło {
     }
 }
 
-window.addEventListener("load", () => {
+window.onload = () => {
     setInterval(() => {
         let speed = Math.random() * 5
         new Koło(speed)
     }, 2000)
-})
+}
 
 //  30.)
 document.getElementById("formularz").onsubmit = function (e) {

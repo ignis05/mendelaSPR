@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+window.onload = () => {
     var spans = document.getElementsByClassName("data")
     var date = new Date
 
@@ -15,4 +15,4 @@ document.addEventListener("DOMContentLoaded", () => {
         spans[i].innerText = `${year}-${month}-${day}`
         date.setDate(date.getDate() + 1) //przewija na nastepny dzień - gwarantuje ciągłość miesięcy i lat
     }
-})
+}

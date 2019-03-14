@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+window.onload = () => {
     var data = window.prompt("wpisz imię i nazwisko")
     var imie = data.split(" ")[0]
     var nazwisko = data.split(" ")[1]
@@ -13,4 +13,4 @@ document.addEventListener("DOMContentLoaded", () => {
         e.stopPropagation()
         window.alert(`Twoje nazwisko to ${nazwisko}`)
     }
-})
+}

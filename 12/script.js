@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+window.onload = () => {
     var divs = document.getElementsByTagName("div")
     Object.values(divs).forEach(div => {
         div.onmousedown = function (e) {
@@ -10,4 +10,4 @@ document.addEventListener("DOMContentLoaded", () => {
             this.style.background = `rgb(${col},${col},${col})`
         }
     });
-})
+}

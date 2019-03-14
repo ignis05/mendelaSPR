@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+window.onload = () => {
     var divs = document.getElementsByTagName("div")
     Object.values(divs).forEach(div => {
         div.onclick = function () {
@@ -7,4 +7,4 @@ document.addEventListener("DOMContentLoaded", () => {
             this.style.background = "blue"
         }
     });
-})
+}
