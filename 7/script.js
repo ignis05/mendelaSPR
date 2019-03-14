@@ -5,4 +5,5 @@ document.addEventListener("DOMContentLoaded", () => {
 function btClick() {
     var link = document.getElementById("formularz").childNodes[0].value
     window.location = "http://" + link
+    // window.open(http:// + link)  //  -otwiera w nowej karcie
 }

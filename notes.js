@@ -53,8 +53,8 @@ setInterval(() => {
 
 //  7.)
 document.getElementById('formularz').children[1].type = 'button' // - zeby nie wysyłać formularza - zmiana typu buttona
-window.location = "http://" + link
-window.open('http://' + link)
+window.location = "http://" + link // - w tej samej karcie
+window.open('http://' + link)   // - w nowej karcie
 
 //  8.)
 isNaN(sth)
