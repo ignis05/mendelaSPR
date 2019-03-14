@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => { }); window.addEventListene
 document.write(""); document.body.innerHTML = ""
 
 //  2.)
-Math.floor(Math.random() * 7) + 3
+~~(Math.random() * 7) + 3
 //  Math.floor(Math.random() * (x + 1 [-y]) ) [+y] - liczba całkowita z zakresu <y, x>
 // (Math.random() * (x [-y])) [+y] - dowolna liczba z zakresu <y, x>
 
@@ -48,7 +48,7 @@ setInterval(() => {
 }, 1000)
 
 //  6.)
-Math.floor(Math.random() * 11)  // <0,10>
+~~(Math.random() * 11)  // <0,10>
 //     ~~x === parseInt(x) - jedyna różnica to że przy ~~: NaN => 0
 
 //  7.)
@@ -122,7 +122,7 @@ e.stopPropagation()
 // najlepiej zapisać dane w zmiennych zamiast wyciągać z innertexta
 
 //  17.)
-var los = Math.floor(Math.random() * 26) + 65 //    Math.floor(Math.random() * (x + 1 [-y]) ) [+y] - liczba całkowita z zakresu <y, x>
+var los = ~~(Math.random() * 26) + 65 //    Math.floor(Math.random() * (x + 1 [-y]) ) [+y] - liczba całkowita z zakresu <y, x>
 String.fromCharCode(los)
 
 //  18.)
@@ -181,11 +181,11 @@ div[0].addEventListener("mouseout", e => {
 //  23.)
 var buttons = document.getElementsByTagName("button")
 for (let i in buttons) {
-    buttons[i].innerText = (parseInt(i) + 1)
+    buttons[i].innerText = (~~(i) + 1)
 }
 
 //  24.)
-var z = parseInt(window.prompt("ile elementów utworzyć?"))
+var z = ~~(window.prompt("ile elementów utworzyć?"))
 for (let i = 0; i < z; i++) {
     let x = document.createElement("div")
     x.classList.add("klasa")
@@ -221,7 +221,7 @@ function generuj(x) {
 
     for (let i = 0; i < tab.length; i++) {  //  "wypełnij ją losowymi liczbami całkowitymi z zakresu <1;N>"
         while (true) {      // "wypełniając zapewnij by nie było w tablicy duplikatów" - losuje tak długo aż nie będzie duplikatu
-            var los = Math.floor(Math.random() * x) + 1
+            var los = ~~(Math.random() * x) + 1
             if (!tab.includes(los)) {
                 tab[i] = los
                 break
@@ -265,8 +265,8 @@ class Koło {
         this.DOM = new Image()
         this.DOM.src = "./round.png"
         this.DOM.style.position = "fixed"
-        var x = Math.floor(Math.random() * (window.innerWidth - 50)) // - szer obrazka - żeby nie wychodziło
-        var y = Math.floor(Math.random() * (window.innerHeight - 50))
+        var x = ~~(Math.random() * (window.innerWidth - 50)) // - szer obrazka - żeby nie wychodziło
+        var y = ~~(Math.random() * (window.innerHeight - 50))
         this.DOM.style.left = x + "px"
         this.DOM.style.top = y + "px"
         document.body.append(this.DOM)
