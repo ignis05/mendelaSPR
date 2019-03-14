@@ -5,7 +5,7 @@ function generuj(x) {
     console.log(tab);
     for (let i = 0; i < tab.length; i++) {
         while (true) {
-            var los = Math.floor(Math.random() * x) + 1
+            var los = ~~(Math.random() * x) + 1
             if (!tab.includes(los)) {
                 tab[i] = los
                 break
