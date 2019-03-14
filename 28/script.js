@@ -1,3 +1,3 @@
 window.addEventListener("load", () => {
-    document.scrollingElement.scrollTop = document.scrollingElement.scrollHeight;
+    window.scrollTo(0, document.body.scrollHeight);
 })
