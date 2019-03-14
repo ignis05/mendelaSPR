@@ -1,6 +1,6 @@
 function xd() {
     var that = document.getElementsByClassName("klasa")[0]
-    var w = window.getComputedStyle(that).getPropertyValue("width")
-    var h = window.getComputedStyle(that).getPropertyValue("height")
+    var w = that.clientWidth
+    var h = that.clientHeight
     that.innerText = `{${w}/${h}}`
 }

@@ -100,9 +100,9 @@ this.style.height = hi + "px" // - dopisać pixele
 
 //  12.)
 e => {
-    var mouseX = e.pageX - div.offsetLeft;
-    var width = window.getComputedStyle(this).width.slice(0, -2)
-    //var width = window.getComputedStyle(this).getPropertyValue("width").slice(0, -2)
+    var mouseX = e.pageX - div.clientLeft;
+    var width = this.clientWidth
+    //var width = window.getComputedStyle(this).width.slice(0, -2)
 }
 
 //  13.)
@@ -126,8 +126,8 @@ var los = ~~(Math.random() * 26) + 65 //    Math.floor(Math.random() * (x + 1 [-
 String.fromCharCode(los)
 
 //  18.)
-let width = window.getComputedStyle(div).width      //  var w = window.getComputedStyle(that).getPropertyValue("width")
-let height = window.getComputedStyle(div).height    //  var h = window.getComputedStyle(that).getPropertyValue("height")
+let width = div.clientWidth      //  var w = window.getComputedStyle(that).getPropertyValue("width")
+let height = div.clientHeight    //  var h = window.getComputedStyle(that).getPropertyValue("height")
 
 //  19.)
 document.cookie = `browser = ${encodeURIComponent(navigator.userAgent)}`
