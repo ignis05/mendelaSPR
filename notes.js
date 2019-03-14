@@ -294,3 +294,66 @@ document.getElementById("formularz").onsubmit = function (e) {
     }
 }
 //ewnetulanie button.type = 'button' i normalnie onclick na buttonie
+
+
+//  podsumowanie:
+Math.floor(Math.random() * (x + 1[-y]))[+y] //- liczba całkowita z zakresu <y, x>
+//
+var x = setInterval(); clearInterval(x)
+//
+isNaN(x)
+//
+var date = new Date
+date.getHours() // getMinutes() getSeconds()
+
+do {
+    date.setDate(date.getDate() + 1)
+} while (date.getDay() != 1)
+for (let i in spans) {
+    var year = date.getFullYear().toString().slice(-2)
+    var month = ('0' + (date.getMonth() + 1)).slice(-2)
+    var day = ('0' + date.getDate()).slice(-2)
+    spans[i].innerText = `${year}-${month}-${day}`
+    date.setDate(date.getDate() + 1)
+}
+//
+function closure(i) {
+    return function () {
+        window.alert(i)
+    }
+}
+//
+tab.push(tab.shift())
+//
+document.getElementById('formularz').children[1].type = 'button'
+//
+window.location = "http://" + link
+//
+hi = this.style.height.slice(0, -2) // - odciąć pixele
+this.style.height = hi + "px" // - dopisać pixele
+//
+e => {
+    var mouseX = e.pageX - div.offsetLeft;
+    var width = window.getComputedStyle(this).width.slice(0, -2)
+}
+//
+e.stopPropagation()
+//
+String.fromCharCode(int)
+//
+document.cookie = `browser = ${encodeURIComponent(navigator.userAgent)}`
+console.log(decodeURIComponent(document.cookie));
+//
+document.addEventListener("contextmenu", e => { e.preventDefault() })
+//
+div[0].addEventListener("mouseover", e => {e.stopPropagation()})
+div[0].addEventListener("mouseout", e => {e.stopPropagation()})
+//
+if (!event.key[1]) document.body.innerHTML = `Wciśnięto: ${event.key}`
+//
+var tab = new Array(x) //   deklaracja tablicy z rozmiarem
+tab.sort((a, b) => b - a) //    "posortuj tablicę malejąco"
+//
+window.scrollTo(0, document.body.scrollHeight);
+//
+kolo.style.animationDuration = this.speed + "s"
