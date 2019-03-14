@@ -125,8 +125,8 @@ var los = ~~(Math.random() * 26) + 65 //    Math.floor(Math.random() * (x + 1 [-
 String.fromCharCode(los)
 
 //  18.)
-let width = div.clientWidth      //  var w = window.getComputedStyle(that).getPropertyValue("width")
-let height = div.clientHeight    //  var h = window.getComputedStyle(that).getPropertyValue("height")
+let width = div.clientWidth      //  var w = window.getComputedStyle(that).width
+let height = div.clientHeight    //  var h = window.getComputedStyle(that).height
 
 //  19.)
 document.cookie = `browser = ${encodeURIComponent(navigator.userAgent)}`
