@@ -49,7 +49,7 @@ setInterval(() => {
 
 //  6.)
 ~~(Math.random() * 11)  // <0,10>
-//     ~~x === parseInt(x) - jedyna różnica to że przy ~~: NaN => 0
+//     ~~x === parseInt(x) === Math.floor(x) - jedyna różnica to że przy ~~: NaN => 0
 
 //  7.)
 document.getElementById('formularz').children[1].type = 'button' // - zeby nie wysyłać formularza - zmiana typu buttona
@@ -100,9 +100,8 @@ this.style.height = hi + "px" // - dopisać pixele
 
 //  12.)
 e => {
-    var mouseX = e.pageX - div.clientLeft;
-    var width = this.clientWidth
-    //var width = window.getComputedStyle(this).width.slice(0, -2)
+    var mouseX = e.pageX - div.offsetLeft;
+    var width = window.getComputedStyle(this).width.slice(0, -2)
 }
 
 //  13.)
